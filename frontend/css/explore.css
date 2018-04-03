@@ -1,0 +1,82 @@
+.explore{
+    max-width: 600px;
+    width:100%;
+    margin-top: 60px;
+   
+}
+.explore__suggested{
+    margin-left: 20px;
+    color: grey;
+}
+.explore__container{
+    background-color: white;
+    border:1px solid rgba(0,0,0,0.08);
+    margin-top: 5px;
+    border-bottom: 0;
+    
+}
+
+.explore__user__list-item{
+    list-style: none;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+   
+    display: flex;
+    justify-content: space-between;
+    
+}
+.explore__profile-photo{
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.08);
+    margin-right: 10px;
+}
+.explore__column{
+    padding: 10px 10px 10px 10px;
+    display: flex;
+}
+.explore__user-nic{
+    display: block;
+    color: #262626;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+}
+.explore__user-name{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color:grey;
+}
+.explore__follow-btn{
+    border:0;
+    border-radius: 3px;
+    background-color: #3e99ed;
+    width :70px;
+    height: 30px;
+    color: white;
+    font-weight: bolder;
+    font-size:13px;
+    cursor: pointer;
+}
+.explore__following-btn{
+    border:0;
+    border-radius: 3px;
+    background-color: #3e99ed;
+    width :90px;
+    height: 30px;
+    color: white;
+    font-weight: bolder;
+    font-size:13px;
+    cursor: pointer;
+    display: none;
+}
+.explore__follow-btn:focus{
+    outline: none;
+}
+.explore__follow-btn:active{
+    display: none;
+}
+.explore__follow-btn:active + .explore__following-btn{
+    display: inline;
+}

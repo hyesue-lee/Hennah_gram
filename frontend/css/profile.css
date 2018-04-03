@@ -94,6 +94,13 @@ i {
       width: 30%;
       height: 250px;
   }
+
+
+  .explore__profile-photo{
+    width:45px;
+    height:40px;
+    border-radius: 50%;
+  }
   
 
 
