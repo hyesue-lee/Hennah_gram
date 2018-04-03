@@ -1,0 +1,101 @@
+.profile{
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.profile__header{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.profile__photo {
+    max-width: 100%; 
+    height: auto; /*비율 유지 기법.*/
+
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 50%;
+    
+}
+.profile__column{
+    align-items: center;
+    margin-left: 50px;
+}
+.profile__column:nth-child(1){
+    width:40%;
+    width:160px;
+    height: 160px;
+}
+.profile__column:nth-child(2){
+    width:60%;
+}
+.profile__user__info{
+    margin-bottom: 20px;
+}
+.profile__user-nicname{
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: lighter;
+}
+.profile__edit{
+    width:130px;
+    height:30px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 3px;
+    font-size: inherit;
+    font-weight: bolder;
+    padding: 5px 5px 15px 5px;
+}
+i {
+    font-size: 22px;
+}
+
+.profile__user-name,
+.profile__count{
+    font-weight: bold;
+    margin-right: 5px;
+}
+.profile__user-nicname,
+.profile__edit,
+.profile__posts,
+.profile__followers{
+    margin-right: 20px;
+}
+.photos__info{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0 solid #000;
+    font-size: 15px;
+    padding: 20px 0px 20px 0px;
+}
+.photos__info .profile__post{
+    margin-right: 30px;
+}
+
+.profile__posted__photos {
+    width: 90%;
+  
+  }
+  .profile__photos__list {
+    width: 90%;
+    display: inline;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .profile__photos__list-item {
+    display: inline;
+  }
+  .posted__photo{
+      width: 30%;
+      height: 300px;
+      margin-bottom: 20px;
+  }
+  
+
+
+
+

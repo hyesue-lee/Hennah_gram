@@ -1,0 +1,26 @@
+{% load static %}
+
+
+    <header class="header">
+            <div class="header__container">
+                <a href="{% url 'feed'%}" class="header__logo">
+                    <img src="{% static 'images\insta_logo.png' %}" class="header__img">
+                </a>
+    
+                <form class="header__search">
+                    <input placeholder="search" type="text" name="search" value=""/>
+                </form>
+    
+                <nav class="header__navigations">
+                    <a href="#" class=header__nav>
+                        <i class="far fa-compass"></i>
+                    </a>
+                    <a href="#" class=header__nav>
+                        <i class="far fa-heart"></i>
+                    </a>
+                    <a href="{% url 'profile'%}" class=header__nav>
+                         <i class="far fa-user"></i>
+                    </a>
+                </nav>
+            </div>
+        </header>

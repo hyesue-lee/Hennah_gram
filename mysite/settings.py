@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls.apps.PollsConfig', #add app to project
+    #add app to project
+    'images', #모델 활성화.
 ]
 
 MIDDLEWARE = [
@@ -55,8 +56,8 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR, 'templates'],
+        'APP_DIRS': True, #기본적으로 앱안의 텝플릿 폴더검색.
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -119,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+] #생성해준 static폴더의 static 파일과 연결.
+
+MEDIA_URL = '/media/' #media파일접근 url이 /media/로시작
+MEDIA_ROOT = os.path.join(BASE_DIR, "media") #실제 파일이 위치하는 서버상 경로. 루트에 할당.

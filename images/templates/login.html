@@ -1,0 +1,49 @@
+{% extends "base.html" %} <!--base template 확장.-->
+
+{% load staticfiles %}
+{% block title%}  log in  {% endblock %} <!--원하는 타이틀 입력-->
+
+{% block content%} <!--원하는 내용(contents) 입력-->
+        <!--main.login-->
+        <main class="login">
+                <div class="login__column">
+                    <img src="/static/images/iphones.png" alt="iphones" title="iphones">
+                </div>
+                <div class="login__column">
+                    <div class="login__box">
+                        <img src="/static/images/insta_logo.png" alt="insta_logo" title="insta_logo">
+                        
+        
+                        <form action="{% url 'feed'%}" method="get" class="login__form">
+                            <input placeholder="Phone number, username or email" type="text" name ="username" required>
+                            <input placeholder="password" type="text" name ="password" required>
+                            <input type=submit value="Log In">
+                        </form>
+        
+                        <span class="login__or">OR</span>
+        
+                        <a href="#" class="login__fb">
+                                <i class="fab fa-facebook-square"></i>
+                                <span class="login__fb-span">Log in with Facebook</span>
+                        </a>
+        
+                        <a href="#" class="login__forgot">Forgot password?</a>
+                           
+                    </div>
+                    <div class="login__box">
+                        <span>Have an account?</span>
+                        <a href="#" class="login__sign_up">Sign up</a>
+                    </div>
+                    <div class="login__box">
+                        <span>Get the app.</span>
+                        <div class="login__apps">
+                            <img src="/static/images\appstore.png" alt="appstore" class="login__apps-appstore">
+                            <img src="/static/images\googleplay.png" alt="googleplay" class="login__apps-googleplay">
+                           
+                        </div>
+        
+                    </div>
+        
+                </div>
+            </main>
+{% endblock%}

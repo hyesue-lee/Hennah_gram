@@ -1,0 +1,81 @@
+{% extends "base.html" %} <!--base template 확장.-->
+
+{% load staticfiles %}
+{% block title%} feed {% endblock %}
+{% block content%}
+
+{% for image in images %}
+
+    <!--feed main-->
+    <main class="feed">
+        <div class="feed__container">
+            <header class="photo__header">
+                <img src="{% static 'images/avatar.png'%}" alt="avatar" class="photo__header__img">
+                <div class="photo__header__contents">
+                    <span class="photo__user-id">{{image.created_by.username}}</span>
+                    <span class="photo__user-location">{{image.location}}</span>
+                </div>
+            </header>
+
+            <img src="/media/{{image.file}}" alt="image.file" class="uploaded__photo">
+            
+            <div class="photo__contents__container">
+                <div class="photo__icons">
+                    <div class="photo__icons__column">
+                            <a href="#" class="photo__icon">
+                                <i class="far fa-heart"></i>
+                            </a>
+                            <a href="#" class="photo__icon">
+                                <i class="far fa-comment"></i>
+                            </a>
+                    </div>
+                    <div class="photo__icons__column">
+                            <a href="#" class="photo__icon">
+                                <i class="far fa-bookmark"></i>
+                            </a>
+                    </div>
+                </div>
+                <div class="photo__likes">
+                    <span class="photo__likes-like">
+                        X
+                    </span>
+                    <span class="photo__likes-like">
+                        likes
+                    </span>
+                </div>    
+                <div class="photo__messages">
+                    <span class="photo__messages-userid">
+                        {{image.created_by.username}}
+                    </span>
+                    <span class="photo__messages-message">
+                        {{image.caption}}
+                    </span>
+                </div>
+
+                <div class="photo__comments">
+                    {% for comment in image.comment_set.all %}
+                        <li class="photo__comment">
+                            <span class="photo__comment-userid">
+                                {{comment.created_by.username}}
+                            </span>
+                            <span class="photo__comment-contents">
+                                {{comment.message}}
+                            </span>
+                        </li>
+                    {%endfor comment%}
+                </div>
+                <span class="photo__date">7 minutes ago</span>
+                <div class="photo__comment-textarea">
+                    <textarea placeholder="Add a comment..." class=photo__comment-textbox></textarea>
+                    <i class="far fa-ellipsis-h"></i>
+                </div>
+            </div>      
+        </div>   
+    </main>
+    
+    {% endfor %}  
+{%endblock%}
+
+
+
+

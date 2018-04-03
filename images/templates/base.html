@@ -1,0 +1,24 @@
+{% load staticfiles %}<!--static파일사용위한 태그 -->
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title%}{% endblock%} | Helloworld</title>
+    </head>
+
+    <body>
+
+        {% if user.is_authenticated %} <!--로긴 시-->
+            {% include "partials/header.html" %} <!--헤더표시-->
+        {% endif %}
+
+        {% block content %} {% endblock%} <!--확장시 넣을내용. -->
+
+        {% include "partials/footer.html"%} <!--푸터-->
+    </body>
+</html>

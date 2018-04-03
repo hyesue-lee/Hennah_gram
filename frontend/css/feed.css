@@ -1,0 +1,46 @@
+.feed{
+    max-width: 600px;
+    width:100%;
+    background-color: white;
+    border:1px solid rgba(0,0,0,0.08);
+    margin-top: 60px;
+}
+.photo__header{
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+}
+.photo__header__img{
+    width:45px;
+    height: 40px;
+    border-radius: 50%;
+}
+.photo__header__contents{
+    margin-left:10px;
+}
+.uploaded__photo{
+    width:100%;
+    border-top:1px solid rgba(0,0,0,0.08);
+}
+.phot__icons,.photo__likes,.phot__messages,.photo__date,.photo__comments{
+    padding:10px 10px;
+    
+}
+.photo__comment{
+    list-style: none;
+}
+.phot__icons{
+    display: flex;
+    justify-content: space-between;
+
+}
+.photo__icon{
+    font-size:20px;
+}
+.photo__icon:nth-child(2){
+    margin-left:10px;
+}
+a {
+    text-decoration: none;
+    color: #241C19;
+}

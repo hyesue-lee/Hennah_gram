@@ -1,0 +1,54 @@
+
+{% extends "base.html" %} <!--base template 확장.-->
+
+{% load staticfiles %}
+{% block title%} feed {% endblock %}
+{% block content%}
+
+    <!--profile main-->
+    <main class="profile">
+        <header class="profile__header">
+            <div class="profile__column">
+                <img src="{% static 'images/avatar.png'%}" alt="profile__photo" class=profile__photo>
+            </div>
+            <div class="profile__column">
+                <div class="profile__user__info">
+                    <span class="profile__user-nicname">Hennah</span>
+                    <button class="profile__edit">Edit Profile</button>
+                    <i class="fas fa-cog"></i>
+                </div>
+                <div class="profile__user__info">
+                    <span class="profile__count">783 </span>
+                    <span class="profile__posts"> posts</span>
+                    <span class="profile__count">636  </span>
+                    <span class="profile__followers"> followers </span>
+                    <span class="profile__count">354 </span>
+                    <span class="profile__following"> following</span>
+                </div>
+                <div class="profile__user__info">
+                    <span class="profile__user-name">hennah</span>
+                    <span class="profile__bio">hello, world! </span>
+                </div>
+            </div>
+        </header>
+
+        <div class="photos__info">
+            <a href="#" class="profile__post">posts</a>
+            <a href="#" class="profile__saved">saved</a>
+        </div>
+
+        
+
+        <div class="profile__posted-photos">
+                {% for image in images %}
+            <ul class="profile__photos__list">
+                <li class="profile__photos__list-item" >            
+                    <img src="/media/{{image.file}}" class="posted__photo">   
+                </li>
+            </ul>
+            {% endfor %}
+        </div>    
+        
+               
+    </main>
+{%endblock%}
