@@ -8,9 +8,25 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
     <link rel="stylesheet" href="css/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <title>Login | mysite</title>
+
+    <script type="text/javascript">
+        function PopFollowing(){
+            var btn__following = document.getElementById("btn-following");
+            var btn__follow = document.getElementById("btn-follow");
+            btn__follow.style.display="none";
+            btn__following.style.display="inline";
+        }
+        function PopFollow(){
+            var btn__following = document.getElementById("btn-following");
+            var btn__follow = document.getElementById("btn-follow");
+            btn__follow.style.display="inline";
+            btn__following.style.display="none";
+        }
+    </script>
+
+    <title>Explore | mysite</title>
+
+
 </head>
 
 <body>
@@ -51,23 +67,10 @@
                         </div>
                     </div>
                     <div class="explore__column">
-                        <button class="explore__follow-btn" onClick="jQuery(this).toggleClass('active')">Follow</button>
-                        <button class="explore__following-btn">Following</button>
+                        <button class="explore__follow-btn" id=btn-follow onclick="PopFollowing()">Follow</button>
+                        <button class="explore__following-btn" id=btn-following onclick="PopFollow()">Following</button>
                     </div>
-                </li>
-                <li class="explore__user__list-item">
-                        <div class="explore__column">
-                            <img src="images/avatar.png" class="explore__profile-photo">
-                            <div class="explore__user-info">
-                                <span class="explore__user-nic">cheers.hennah</span>
-                                <span class="explore__user-name">leehyesue</span>
-                            </div>
-                        </div>
-                        <div class="explore__column">
-                            <button class="explore__follow-btn">Follow</button>
-                            <button class="explore__following-btn">Following</button>
-                        </div>
-                    </li>        
+                </li> 
             </div>
     </main>
  

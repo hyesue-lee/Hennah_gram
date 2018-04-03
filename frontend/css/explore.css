@@ -57,7 +57,7 @@
     color: white;
     font-weight: bolder;
     font-size:13px;
-    cursor: pointer;
+    cursor: pointer;   
 }
 .explore__following-btn{
     border:0;
@@ -70,13 +70,17 @@
     font-size:13px;
     cursor: pointer;
     display: none;
+    outline: none;
 }
+
 .explore__follow-btn:focus{
     outline: none;
 }
+/*
 .explore__follow-btn:active{
     display: none;
 }
 .explore__follow-btn:active + .explore__following-btn{
     display: inline;
 }
+*/
