@@ -30,6 +30,7 @@ urlpatterns = [
     path('feed/', views.feed, name='feed'),
     path('explore/', views.explore, name='explore'),
     path('profile/', views.profile, name='profile'),
+    path('like/', views.like, name='like'),
     path('login/', views.login, name='login'),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 #static함수에 첫번째인자로 url,키워드 인자로 경로전달

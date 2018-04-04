@@ -1,0 +1,33 @@
+{% extends "base.html" %} <!--base template 확장.-->
+
+{% load static%}
+{% block title%} Like {% endblock %}
+{% block content%}
+
+<main class="likes">
+        <div class="likes__container">
+            {% for like in likes %}
+            
+                <li class="likes__user__list-item">
+                    <div class="likes__column">
+                        <img src="{% static "images/avatar.png" %}" class="likes__profile-photo">
+                        <div class="likes__user-info">
+                            <span class="likes__user-nic">{{like.created_by.username}}</span>
+                            <span class="likes__yours">liked your photo.</span>
+                            <span class="likes__yours-time">1s</span>
+                        </div>
+                    </div>
+                    {% for image in images %} <!--좋아요된사진만불러오기-->
+                    {% if like.created_for == image %}
+                    <div class="likes__column">
+                        <img src="/media/{{image.file}}" class="likes__photo">
+                    </div>
+                    {%endif%}
+                    {%endfor%}
+                </li> 
+            
+            {% endfor %}    
+            </div>
+    </main>
+
+{%endblock content%}

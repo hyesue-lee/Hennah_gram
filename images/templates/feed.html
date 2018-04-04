@@ -35,14 +35,17 @@
                             </a>
                     </div>
                 </div>
+                
                 <div class="photo__likes">
                     <span class="photo__likes-like">
-                        X
+                        {{image.like_set.all.count}}
+
                     </span>
                     <span class="photo__likes-like">
                         likes
                     </span>
-                </div>    
+                </div>  
+                 
                 <div class="photo__messages">
                     <span class="photo__messages-userid">
                         {{image.created_by.username}}
@@ -62,7 +65,7 @@
                                 {{comment.message}}
                             </span>
                         </li>
-                    {%endfor comment%}
+                  {%endfor comment%}
                 </div>
                 <span class="photo__date">7 minutes ago</span>
                 <div class="photo__comment-textarea">

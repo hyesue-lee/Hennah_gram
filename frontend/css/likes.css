@@ -1,0 +1,56 @@
+.likes{
+    max-width: 600px;
+    width:100%;
+    margin-top: 60px;
+   
+}
+.likes__container{
+    background-color: white;
+    border:1px solid rgba(0,0,0,0.08);
+    margin-top: 5px;
+    border-bottom: 0;
+    
+}
+
+.likes__user__list-item{
+    list-style: none;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+   
+    display: flex;
+    justify-content: space-between;
+    
+}
+.likes__profile-photo{
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.08);
+    margin-right: 10px;
+}
+.likes__column{
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+}
+.likes__user-info{
+ 
+}
+.likes__user-nic{
+    color: #262626;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+}
+.likes__yours{
+    color: #262626;
+    font-size: 14px;
+    line-height: 18px;
+}
+.likes__yours-time{
+    color:grey;
+}
+
+.likes__photo{
+    width:50px;
+    height:50px;
+}

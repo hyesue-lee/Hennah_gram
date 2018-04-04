@@ -1,0 +1,46 @@
+{% extends "base.html" %} <!--base template 확장.-->
+
+{% load staticfiles %}
+{% block title%} Explore {% endblock %}
+{% block content%}
+<script type="text/javascript">
+    function PopFollowing(){
+        var btn__following = document.getElementById("btn-following");
+        var btn__follow = document.getElementById("btn-follow");
+        btn__follow.style.display="none";
+        btn__following.style.display="inline";
+    }
+    function PopFollow(){
+        var btn__following = document.getElementById("btn-following");
+        var btn__follow = document.getElementById("btn-follow");
+        btn__follow.style.display="inline";
+        btn__following.style.display="none";
+    }
+</script>
+
+
+    <!--main explore-->
+    <main class="explore">
+        <span class="explore__suggested">Suggested</span>
+        <div class="explore__container">
+            {% for user in users %}
+            <li class="explore__user__list-item">
+                <div class="explore__column">
+                    <img src="{% static 'images/avatar.png'%}" class="explore__profile-photo">
+                    <div class="explore__user-info">
+                        <span class="explore__user-nic">{{user.username}}</span>
+                        <span class="explore__user-name">{{user.first_name}}</span>
+                    </div>
+                </div>
+                <div class="explore__column">
+                    <button class="explore__follow-btn" id=btn-follow onclick="PopFollowing()">Follow</button>
+                    <button class="explore__following-btn" id=btn-following onclick="PopFollow()">Following</button>
+                </div>
+            </li> 
+            {% endfor %}
+        </div>
+    </main>
+     
+
+
+{%endblock content%}
